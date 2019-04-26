@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'assets/color';
+
+* {
+  list-style: none;
+  -webkit-padding-start: 0;
+  -moz-padding-start: 0;
+}
+
+.button {
+  padding: 8px;
+  font-family: Poppins, sans-serif;
+  text-transform: uppercase;
+  border: 1px;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+
+  & {
+    width: 300px;
+    color: #fff;
+  }
+}
+
+.confirm-button {
+  width: 70%;
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+
+  & {
+    background: $orange;
+    color: #fff;
+  }
+}
+
+.enable:hover {
+  border: 1px solid $orange;
+  transition: 0.3s;
+
+  & {
+    background: #fff;
+    color: $orange;
+  }
+}
+
+.disable {
+  cursor: not-allowed;
+
+  & {
+    background: $gray;
+  }
+}
