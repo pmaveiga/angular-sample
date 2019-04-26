@@ -1,0 +1,34 @@
+<h3 class="profile-register-title">perfil do investidor - questionário</h3>
+<main class="profile-main">
+  <section class="questions" *ngFor="let question of questions">
+    <span class="question-title">{{ question.id + ' - ' + question.title }}</span>
+    <ul class="question-list" *ngIf="question.id != 4">
+      <li class="question-item" *ngFor="let option of question.options; let i = index">
+        <input class="question-option" id="question{{question.id}}{{i}}"
+               name="question{{ question.id }}" type="radio">
+        <label class="question-description" for="question{{question.id}}{{i}}" (click)="attachSelected(option, question.id)">
+          {{ option }}
+        </label>
+      </li>
+    </ul>
+    <ul class="question-select-list" *ngIf="question.id == 4">
+      <li class="question-select-item" *ngFor="let option of question.options; let i = index">
+        <select class="question-select" id="question{{question.id}}{{i}}"
+                [(ngModel)]="values[i]">
+          <option value="Nunca operei">Nunca operei</option>
+          <option value="Opero pouco e não tenho familiaridade">Opero pouco e não tenho familiaridade</option>
+          <option value="Opero eventualmente e conheço os riscos associados">Opero eventualmente e conheço os riscos associados</option>
+          <option value="Opero frequentemente e conheço os riscos associados">Opero frequentemente e conheço os riscos associados</option>
+        </select>
+        <label class="question-select-description" for="question{{question.id}}{{i}}">{{ option }}</label>
+      </li>
+    </ul>
+  </section>
+  <footer class="main-footer">
+    <button class="button back-button" [routerLink]="['']">voltar</button>
+    <button class="button submit-button"
+            [ngClass]="[selected.length + values.length == 7 ? 'enable' : 'disable']"
+            [disabled]="selected.length + values.length < 7"
+            (click)="save()">enviar</button>
+  </footer>
+</main>

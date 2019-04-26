@@ -1,0 +1,117 @@
+.profile-register-title {
+  font: bold 1em Poppins, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+.profile-register-title {
+  color: #a8868f;
+}
+
+.profile-main {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+.profile-main .questions {
+  text-align: center;
+  margin: 20px auto;
+  padding-bottom: 25px;
+}
+.profile-main .questions:not(:last-of-type) {
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
+}
+.profile-main .questions .question-title {
+  width: 570px;
+  margin: 0 auto;
+  font: 700 1em Poppins, sans-serif;
+}
+.profile-main .questions .question-title {
+  color: #808080;
+}
+.profile-main .questions .question-list {
+  display: flex;
+}
+.profile-main .questions .question-list .question-item {
+  width: 250px;
+  display: flex;
+}
+.profile-main .questions .question-list .question-item .question-option {
+  margin-right: 10px;
+  outline: none;
+}
+.profile-main .question-description, .profile-main .question-select-description {
+  cursor: pointer;
+  text-transform: uppercase;
+  font: 600 0.8em Poppins, sans-serif;
+}
+.profile-main .question-description, .profile-main .question-select-description {
+  color: #808080;
+}
+.profile-main .question-select-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.profile-main .question-select-list .question-select-item {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 25px;
+}
+.profile-main .question-select-list .question-select-item .question-select-description {
+  margin: 10px auto;
+}
+.profile-main .question-select-list .question-select-item .question-select:focus + .question-select-description {
+  font-weight: bold;
+}
+.profile-main .question-select-list .question-select-item .question-select:focus + .question-select-description {
+  color: #a8868f;
+}
+.profile-main .question-select-list .question-select-item .question-select {
+  width: 350px;
+  border: none;
+  border-bottom: 1px solid #808080;
+  outline: none;
+}
+.profile-main .question-select-list .question-select-item .question-select {
+  background: none;
+}
+.profile-main .main-footer {
+  align-self: flex-end;
+}
+.profile-main .main-footer .back-button, .profile-main .main-footer .submit-button {
+  width: 150px;
+  font: bold 1em Poppins, sans-serif;
+}
+.profile-main .main-footer .back-button {
+  margin-right: 20px;
+}
+.profile-main .main-footer .back-button {
+  background: #808080;
+}
+.profile-main .main-footer .back-button:hover {
+  background: #fff;
+  color: #808080;
+  border: 1px solid #808080;
+  transition: 0.3s;
+}
+.profile-main .main-footer .enable {
+  background: #febc10;
+}
+.profile-main .main-footer .enable:hover {
+  border: 1px solid #febc10;
+  transition: 0.3s;
+}
+.profile-main .main-footer .enable:hover {
+  background: #fff;
+  color: #febc10;
+}
+.profile-main .disable {
+  cursor: not-allowed;
+}
+.profile-main .disable {
+  background: #808080;
+}
+
+/*# sourceMappingURL=profile-register.component.css.map */

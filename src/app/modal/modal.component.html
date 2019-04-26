@@ -1,0 +1,17 @@
+<main class="modal-container">
+  <section class="modal-content">
+    <i class="close-modal" (click)="closeModal()">X</i>
+    <header class="modal-header">{{ title }}</header>
+    <p class="modal-text">{{ content }}</p>
+
+    <ul class="agree-list">
+      <li class="agree-item">
+        <input type="checkbox" id="agree" class="agree" [(ngModel)]="agree">
+        <label for="agree" class="agree-label">{{ agreeContent }}</label>
+      </li>
+    </ul>
+
+    <button [ngClass]="[agree ? 'enable' : 'disable']" [disabled]="!agree"
+            class="confirm-button" (click)="confirm()">{{ buttonContent }}</button>
+  </section>
+</main>

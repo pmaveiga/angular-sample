@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  list-style: none;
+  -webkit-padding-start: 0;
+  -moz-padding-start: 0;
+}
+
+.button {
+  padding: 8px;
+  font-family: Poppins, sans-serif;
+  text-transform: uppercase;
+  border: 1px;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+}
+.button {
+  width: 300px;
+  color: #fff;
+}
+
+.confirm-button {
+  width: 70%;
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+.confirm-button {
+  background: #febc10;
+  color: #fff;
+}
+
+.enable:hover {
+  border: 1px solid #febc10;
+  transition: 0.3s;
+}
+.enable:hover {
+  background: #fff;
+  color: #febc10;
+}
+
+.disable {
+  cursor: not-allowed;
+}
+.disable {
+  background: #808080;
+}
+
+/*# sourceMappingURL=styles.css.map */

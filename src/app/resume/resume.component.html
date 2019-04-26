@@ -1,0 +1,22 @@
+<header class="main-header">
+  <section class="top-header">
+    <img src="../../assets/images/pen.png" alt="Pen icon" class="pen-icon">
+    <h1 class="title">cadastro realizado com sucesso!</h1>
+    <div *ngIf="data != undefined">
+      <div class="question-title" *ngFor="let question of questions; let i = index">
+        {{ question.id + ' - ' + question.title }}
+        <p class="result" *ngIf="i < 3">
+          {{ data?.data[i]?.option.toUpperCase() }}
+        </p>
+        <div *ngIf="i == 3">
+          <div *ngFor="let o of question.options; let i = index">
+            {{ o.toUpperCase() }}
+            <div class="result" *ngFor="let value of data?.data[3]; let j = index">
+              <p *ngIf="i == j">{{ value }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</header>

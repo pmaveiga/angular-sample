@@ -1,0 +1,146 @@
+@import '../../assets/color';
+
+.profile-register-title {
+  font: bold 1em Poppins, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+
+  & {
+    color: $purple;
+  }
+}
+
+.profile-main {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+
+  .questions {
+    text-align: center;
+    margin: 20px auto;
+    padding-bottom: 25px;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
+    }
+
+    .question-title {
+      width: 570px;
+      margin: 0 auto;
+      font: 700 1em Poppins, sans-serif;
+
+      & {
+        color: $gray;
+      }
+    }
+
+    .question-list {
+      display: flex;
+
+      .question-item {
+        width: 250px;
+        display: flex;
+
+        .question-option {
+          margin-right: 10px;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .question-description, .question-select-description {
+    cursor: pointer;
+    text-transform: uppercase;
+    font: 600 0.8em Poppins, sans-serif;
+
+    & {
+      color: $gray;
+    }
+  }
+
+  .question-select-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .question-select-item {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-bottom: 25px;
+
+      .question-select-description {
+        margin: 10px auto;
+      }
+
+      .question-select:focus {
+        + .question-select-description {
+          font-weight: bold;
+
+          & {
+            color: $purple;
+          }
+        }
+      }
+
+      .question-select {
+        width: 350px;
+        border: none;
+        border-bottom: 1px solid $gray;
+        outline: none;
+
+        & {
+          background: none;
+        }
+      }
+    }
+  }
+
+  .main-footer {
+    align-self: flex-end;
+
+    .back-button, .submit-button {
+      width: 150px;
+      font: bold 1em Poppins, sans-serif;
+    }
+
+    .back-button {
+      margin-right: 20px;
+
+      & {
+        background: $gray;
+      }
+
+      &:hover {
+        background: #fff;
+        color: $gray;
+        border: 1px solid $gray;
+        transition: 0.3s;
+      }
+    }
+
+    .enable {
+      background: $orange;
+    }
+
+    .enable:hover {
+      border: 1px solid $orange;
+      transition: 0.3s;
+
+      & {
+        background: #fff;
+        color: $orange;
+      }
+    }
+  }
+
+  .disable {
+    cursor: not-allowed;
+
+    & {
+      background: $gray;
+    }
+  }
+}

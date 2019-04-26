@@ -1,0 +1,28 @@
+<header class="main-header">
+  <section class="top-header">
+    <img src="../../assets/images/pen.png" alt="Pen icon" class="pen-icon">
+    <h3 class="title">informações recebidas!</h3>
+    <p class="text-header">
+      Em até 48h daremos um retorno sobre a abertura de sua conta.
+    </p>
+    <p class="text-header">
+      Para receber nossas recomendações de investimentos e começar a investir, precisamos conhecer seu perfil de
+      investidor.
+    </p>
+    <p class="text-header">
+      São apenas 4 perguntas que irão guiar todas as suas decisões de investimentos.
+    </p>
+  </section>
+  <footer class="main-header-footer">
+    <span class="title-header-footer">Gostaria de responder ao Perfil do investidor?</span>
+    <button class="btn-default" (click)="enableModal()">não</button>
+    <button class="btn-default" [routerLink]="['/profile']">sim</button>
+  </footer>
+</header>
+<modal [title]="'Termo'"
+       [content]="'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been ' +
+       'the industry\'\s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and' +
+       ' scrambled it to make a type.'"
+       [buttonContent]="'OK, ENTENDI'"
+       [agreeContent]="'Li e aceito os termos e condições acima'" #modal></modal>
+
